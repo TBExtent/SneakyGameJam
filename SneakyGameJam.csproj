@@ -472,7 +472,6 @@
     <Compile Include="Assets\PlayerControls.cs" />
     <Compile Include="Assets\PlayerShootingRaycast.cs" />
     <Compile Include="Assets\Slapthetexturematecheers.cs" />
-    <Compile Include="Assets\TimedSelfDestructor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon Unity Networking\Demos\DemoBoxes\Resources\eurof_tt.txt" />
