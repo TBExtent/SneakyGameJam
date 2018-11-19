@@ -2,13 +2,14 @@
 using System.Collections;
 
 public class TeamMember : MonoBehaviour {
+    Renderer rend;
     public bool isPlayer = true;
     public int _teamID = 0;
     public int teamID
     {
         get { return _teamID; }
     }
-    [Header("Element 1 corresponds to RED, 2 to BLUE")]
+    [Header("Element 1 corresponds to RED, 2 to Blue")]
     public Texture[] CharacterTextures;
     public Transform[] TeamColourTransforms;
     [PunRPC]
@@ -17,7 +18,8 @@ public class TeamMember : MonoBehaviour {
         _teamID = id;
         foreach(Transform t in TeamColourTransforms)
         {
-            t.GetComponent<Material>().mainTexture = CharacterTextures[id];
+            rend = t.GetComponent<Renderer>();
+            rend.material.mainTexture = CharacterTextures[id];
         }
 
     }

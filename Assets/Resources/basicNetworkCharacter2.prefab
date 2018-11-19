@@ -78,6 +78,9 @@ GameObject:
   - component: {fileID: 114129075267162750}
   - component: {fileID: 143443897966403028}
   - component: {fileID: 114519878495378396}
+  - component: {fileID: 114219056464163828}
+  - component: {fileID: 114924330473134874}
+  - component: {fileID: 114138941569133948}
   m_Layer: 0
   m_Name: basicNetworkCharacter2
   m_TagString: Untagged
@@ -160,7 +163,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1888377997430414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -111.346664, y: 167.36118, z: -358.44873}
+  m_LocalPosition: {x: -7.7, y: 1.88, z: 6.1432605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4031653109061814}
@@ -225,7 +228,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 37d0d4d178b5dbf449ff0814718dc354, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -519,6 +522,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   realRotation: {x: 0, y: 0, z: 0, w: 1}
   RealAimAngle: 0
+--- !u!114 &114138941569133948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888377997430414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a46177ae0bb2a14db8ff7556f17e424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localBarrel: {fileID: 0}
+  Barrel: {fileID: 0}
+  fireRate: 0.1
+  shootClip: {fileID: 0}
+  viewModel: {fileID: 0}
+  muzzleFlash: {fileID: 0}
+  ricochet: {fileID: 0}
+--- !u!114 &114219056464163828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888377997430414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0103dd974a0b7c94b903dc1d3d1ae5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  _teamID: 0
+  CharacterTextures:
+  - {fileID: 2800000, guid: db4b1de3894093748ba777a98ddacd8b, type: 3}
+  - {fileID: 2800000, guid: 1bdfbf15f6abec34e9bb38e2d81fcc84, type: 3}
+  TeamColourTransforms:
+  - {fileID: 4814523393826482}
 --- !u!114 &114519878495378396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -629,6 +668,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 929fce59cfb3e4ca795e8af4d9b4f54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114924330473134874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888377997430414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8afd2e8d973d37f4bb5b498cd284b0a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 100
+  currentHitPoints: 100
+  respawnTime: 5
+  lastHitPlayer: 
+  lastHitType: 
+  killedText: {fileID: 0}
+  fragText: {fileID: 0}
+  ragdollNormal: {fileID: 0}
 --- !u!114 &114992406462389504
 MonoBehaviour:
   m_ObjectHideFlags: 1

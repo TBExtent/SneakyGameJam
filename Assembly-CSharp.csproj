@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Health.cs" />
     <Compile Include="Assets\Menu Scripts\MapNameButton.cs" />
     <Compile Include="Assets\Menu Scripts\MapSelector.cs" />
     <Compile Include="Assets\Menu Scripts\MasterMenu.cs" />
@@ -214,6 +215,7 @@
     <Compile Include="Assets\PhotonChatApi\ChatUserStatus.cs" />
     <Compile Include="Assets\PhotonChatApi\IChatClientListener.cs" />
     <Compile Include="Assets\PlayerControls.cs" />
+    <Compile Include="Assets\PlayerShootingRaycast.cs" />
     <None Include="Assets\Photon Unity Networking\Demos\MarcoPolo-Tutorial\marcopolo-readme.txt" />
     <None Include="Assets\Photon Unity Networking\link.xml" />
     <None Include="Assets\Photon Unity Networking\Demos\DemoBoxes\Resources\eurof_tt.txt" />
