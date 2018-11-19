@@ -55,7 +55,7 @@ public class PlayerControls : MonoBehaviour {
 			rigidBody.velocity = new Vector3(rigidBody.velocity.x, jumpHeight, rigidBody.velocity.z);
 		}
 
-		if (Input.GetKey(KeyCode.Mouse0)) GunParticles();
+		//if (Input.GetKey(KeyCode.Mouse0)) GunParticles();
 	}
 
 	void GunParticles () {
