@@ -53,11 +53,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Health.cs" />
      <Compile Include="Assets\Menu Scripts\MapNameButton.cs" />
      <Compile Include="Assets\Menu Scripts\MapSelector.cs" />
      <Compile Include="Assets\Menu Scripts\MasterMenu.cs" />
      <Compile Include="Assets\Menu Scripts\ServerBrowser.cs" />
      <Compile Include="Assets\Menu Scripts\ServerBrowserBack.cs" />
+     <Compile Include="Assets\Offline Scripts\CPMPlayer.cs" />
+     <Compile Include="Assets\Offline Scripts\TeamMember.cs" />
      <Compile Include="Assets\Online Scripts\NetworkCharacter.cs" />
      <Compile Include="Assets\Online Scripts\selfNetworkManager.cs" />
      <Compile Include="Assets\Online Scripts\SpawnPoint.cs" />
@@ -204,6 +207,7 @@
      <Compile Include="Assets\PhotonChatApi\ChatUserStatus.cs" />
      <Compile Include="Assets\PhotonChatApi\IChatClientListener.cs" />
      <Compile Include="Assets\PlayerControls.cs" />
+     <Compile Include="Assets\PlayerShootingRaycast.cs" />
      <None Include="Assets\Photon Unity Networking\Demos\MarcoPolo-Tutorial\marcopolo-readme.txt" />
      <None Include="Assets\Photon Unity Networking\link.xml" />
      <None Include="Assets\Photon Unity Networking\Demos\DemoBoxes\Resources\eurof_tt.txt" />
@@ -469,12 +473,12 @@
       <Project>{46A91240-1C97-3F08-58FF-9F64D99BA730}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
   </Target>
   -->
-
+  
 </Project>
