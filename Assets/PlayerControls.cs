@@ -38,7 +38,9 @@ public class PlayerControls : MonoBehaviour {
 
 		rigidBody.velocity = new Vector3(Input.GetAxis("Horizontal") * speed * Mathf.Cos(rotationX * Mathf.Deg2Rad) + Input.GetAxis("Vertical") * speed * Mathf.Sin(rotationX * Mathf.Deg2Rad), rigidBody.velocity.y, Input.GetAxis("Vertical") * speed * Mathf.Cos(rotationX * Mathf.Deg2Rad) - Input.GetAxis("Horizontal") * speed * Mathf.Sin(rotationX * Mathf.Deg2Rad));
 		Vector3 floorPosition = new Vector3(transform.position.x, transform.position.y - 0.9f, transform.position.z);
-		if (Input.GetKey(KeyCode.Space) && Physics.Raycast(floorPosition, Vector3.down, groundDist) && Mathf.Abs(rigidBody.velocity.y) < 5) {
+		RaycastHit hit;
+		bool onGround = Physics.Raycast(floorPosition, Vector3.down, out hit, groundDist);
+		if (Input.GetKey(KeyCode.Space) && onGround && Mathf.Abs(rigidBody.velocity.y) < 5) {
 			//Debug.Log("aaa");
 			rigidBody.velocity = new Vector3(rigidBody.velocity.x, jumpHeight, rigidBody.velocity.z);
 		}
