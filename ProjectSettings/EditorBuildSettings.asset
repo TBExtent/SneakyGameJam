@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 52bff590274f2d740b374f229895a711
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
@@ -14,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Create Room.unity
     guid: 78c46f8f1de027647b20bc38f62f7fcb
-  - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
-    guid: 52bff590274f2d740b374f229895a711
   - enabled: 1
     path: Assets/Scenes/JordanTestScene.unity
     guid: 88a53b3cb997c3f4096dd59d5cead080
