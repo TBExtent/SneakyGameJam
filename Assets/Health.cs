@@ -35,10 +35,9 @@ public class Health : MonoBehaviour
     }
 
     [PunRPC]
-    public void TakeDamage(float amt, string LHP, string LHT)
+    public void TakeDamage(float amt, string LHP, int killerTeamID)
     {
         lastHitPlayer = LHP;
-        lastHitType = LHT;
         amt = Mathf.Round(amt);
         currentHitPoints -= amt;
 
@@ -50,7 +49,7 @@ public class Health : MonoBehaviour
         {
 
 
-            Die(LHT, LHP);
+            Die(LHP);
         }
     }
     //
@@ -64,7 +63,7 @@ public class Health : MonoBehaviour
         }
     } */
     [PunRPC]
-    void instantiateRagdoll(string lastHitType)
+    void instantiateRagdoll()
     {
             Instantiate(ragdollNormal, transform.position, transform.rotation);
     }
@@ -79,7 +78,7 @@ public class Health : MonoBehaviour
     }
 
 
-    void Die(string LHT, string LHP)
+    void Die(string LHP)
     {
 
         if (snm.offlineMode == false)
@@ -87,7 +86,7 @@ public class Health : MonoBehaviour
             if (IsDying == false)
             {
                 IsDying = true;
-                GetComponent<PhotonView>().RPC("instantiateRagdoll", PhotonTargets.All, LHT);
+                GetComponent<PhotonView>().RPC("instantiateRagdoll", PhotonTargets.All);
                 if (GetComponent<PhotonView>().instantiationId == 0)
                 {
                     Destroy(gameObject);
@@ -96,7 +95,8 @@ public class Health : MonoBehaviour
                 {
                     if (GetComponent<PhotonView>().isMine)
                     {
-
+                        snm.playerRespawnTimer = 1f;
+                        snm.standbyCamera.SetActive(true);
                         PhotonNetwork.Destroy(gameObject);
                         //  Invoke("AddDeath", 0.05f);
                         // Invoke("Dest", 0.1f);
