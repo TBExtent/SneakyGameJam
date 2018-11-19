@@ -8,9 +8,11 @@ public class PlayerControls : MonoBehaviour {
 	Transform transform;
 	Transform cameraTransform;
 	float speed = 5f;
-	float sensitivity = 3f;
-	float minimumY = -60f;
-	float maximumY = 60f;
+	float sensitivity = 5f;
+	float minimumY = -120f;
+	float maximumY = 0;
+	bool invertX = false;
+	bool invertY = true;
 
 	// Use this for initialization
 	void Start () {
@@ -21,13 +23,20 @@ public class PlayerControls : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		rigidBody.velocity = new Vector3(Input.GetAxis("Horizontal") * speed, rigidBody.velocity.y, Input.GetAxis("Vertical") * speed);
 
 		float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivity;
 		float rotationY = cameraTransform.localEulerAngles.x + Input.GetAxis("Mouse Y") * sensitivity;
+
+		if (invertX) rotationX = transform.localEulerAngles.y - Input.GetAxis("Mouse X") * sensitivity;
+		else rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivity;
+
+		if (invertY) rotationY = cameraTransform.localEulerAngles.x - Input.GetAxis("Mouse Y") * sensitivity;
+		else rotationY = cameraTransform.localEulerAngles.x + Input.GetAxis("Mouse Y") * sensitivity;
 		//rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
 
 		transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, rotationX, transform.localEulerAngles.z);
-		//cameraTransform.localEulerAngles = new Vector3(rotationY, cameraTransform.localEulerAngles.y, cameraTransform.localEulerAngles.z);
+		cameraTransform.localEulerAngles = new Vector3(rotationY, cameraTransform.localEulerAngles.y, cameraTransform.localEulerAngles.z);
+
+		rigidBody.velocity = new Vector3(Input.GetAxis("Horizontal") * speed * Mathf.Cos(rotationX * Mathf.Deg2Rad) + Input.GetAxis("Vertical") * speed * Mathf.Sin(rotationX * Mathf.Deg2Rad), rigidBody.velocity.y, Input.GetAxis("Vertical") * speed * Mathf.Cos(rotationX * Mathf.Deg2Rad) - Input.GetAxis("Horizontal") * speed * Mathf.Sin(rotationX * Mathf.Deg2Rad));
 	}
 }
