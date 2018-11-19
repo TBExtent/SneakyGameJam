@@ -39,7 +39,7 @@ public class NetworkCharacter : Photon.MonoBehaviour {
         {
             transform.position = Vector3.Lerp(transform.position, realPosition, 0.1f);
             transform.rotation = Quaternion.Lerp(transform.rotation, realRotation, 0.1f);
-
+            anim.SetFloat("AimAngle", Mathf.Lerp(anim.GetFloat("AimAngle"), RealAimAngle, 0.1f));
         }
     }
 
@@ -52,7 +52,7 @@ public class NetworkCharacter : Photon.MonoBehaviour {
 
             stream.SendNext(transform.position);
             stream.SendNext(transform.rotation);
-
+            stream.SendNext(anim.GetFloat("AimAngle"));
 
         }
         else

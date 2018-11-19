@@ -2000,7 +2000,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: d7a762f267693ff4f97f268f010e4fb8, type: 2}
+  - {fileID: 2100000, guid: 8154af0d0eba2554cad5a71160088475, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3169,7 +3169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   realRotation: {x: 0, y: 0, z: 0, w: 1}
-  anim: {fileID: 0}
+  anim: {fileID: 95799206982588548}
   RealAimAngle: 0
 --- !u!114 &114268346847954970
 MonoBehaviour:
@@ -3177,7 +3177,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1726224893862008}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 929fce59cfb3e4ca795e8af4d9b4f54d, type: 3}
   m_Name: 
@@ -3223,17 +3223,17 @@ MonoBehaviour:
   isPlayer: 1
   _teamID: 0
   CharacterTextures:
-  - {fileID: 2800000, guid: db4b1de3894093748ba777a98ddacd8b, type: 3}
-  - {fileID: 2800000, guid: 1bdfbf15f6abec34e9bb38e2d81fcc84, type: 3}
+  - {fileID: 2800000, guid: 72708a25103c3fe4f9074f7296e86b7a, type: 3}
+  - {fileID: 2800000, guid: 11fbb6bb403e9e84aac8883a35555355, type: 3}
   TeamColourTransforms:
-  - {fileID: 4484630193905940}
+  - {fileID: 4718229095449650}
 --- !u!114 &114719708893042120
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1726224893862008}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0efa9e72e28c2b04ea72d9dc1808d1a4, type: 3}
   m_Name: 

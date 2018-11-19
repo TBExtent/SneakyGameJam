@@ -8,7 +8,7 @@ public class selfNetworkManager : MonoBehaviour {
     public bool offlineMode = false;
     public string strPlayerGameObject = "basicNetworkCharacter";
     bool connecting = false;
-
+    public GameObject playerModel;
     List<string> chatMessages;
     int maxChatMessages = 5;
     bool hasPickedTeam = false;
@@ -208,8 +208,15 @@ public class selfNetworkManager : MonoBehaviour {
         myPlayerGOcam.GetComponent<FlareLayer>().enabled = true;
         myPlayerGO.GetComponent<PlayerControls>().enabled = true;
         myPlayerGO.GetComponent<PlayerShootingRaycast>().enabled = true;
-
+        myPlayerGO.GetComponent<AimAngleScript>().enabled = true;
         myPlayerGO.GetComponent<PhotonView>().RPC("SetTeamID", PhotonTargets.AllBuffered, teamID);
+        //  foreach (Transform child in playerModelChildren)
+      //    {
+      //        child.gameObject.layer = 9;
+      //    }
+
+
+
         // myPlayerGO.GetComponentInChildren<EnhancedMouseLook>().enabled = true;
 
     //     myPlayerGOcam.GetComponent<AudioListener>().enabled = true;
