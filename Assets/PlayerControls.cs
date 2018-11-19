@@ -17,7 +17,7 @@ public class PlayerControls : MonoBehaviour {
 		//transform = GetComponent<Transform>();
 		cameraTransform = transform.GetChild(0).GetComponent<Transform>();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 

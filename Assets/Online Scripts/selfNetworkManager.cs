@@ -199,32 +199,35 @@ public class selfNetworkManager : MonoBehaviour {
         // This line here references the resource we are going to load for our character:
         GameObject myPlayerGO = PhotonNetwork.Instantiate(strPlayerGameObject, mySpawnPoint.transform.position, mySpawnPoint.transform.rotation, 0);
         // After we have instantiated our character on the network, we should enable all the scripts that we will use to control it:
-       /* GameObject myPlayerGOcam = myPlayerGO.transform.Find("FirstPersonCharacter").gameObject;
+        GameObject myPlayerGOcam = myPlayerGO.transform.Find("FirstPersonCharacter").gameObject;
         myPlayerGOcam.GetComponent<Camera>().enabled = true;
         myPlayerGOcam.GetComponent<AudioListener>().enabled = true;
         myPlayerGOcam.GetComponent<FlareLayer>().enabled = true;
+        myPlayerGO.GetComponent<CPMPlayer>().enabled = true;
 
-        /* myPlayerGO.GetComponentInChildren<EnhancedMouseLook>().enabled = true;
+        myPlayerGO.GetComponent<PhotonView>().RPC("SetTeamID", PhotonTargets.AllBuffered, teamID);
+        // myPlayerGO.GetComponentInChildren<EnhancedMouseLook>().enabled = true;
 
-         myPlayerGOcam.GetComponent<AudioListener>().enabled = true;
-         myPlayerGOcam.GetComponent<FlareLayer>().enabled = true;
-         myPlayerGO.GetComponent<PlayerMovement>().enabled = true;
-         myPlayerGO.GetComponent<PlayerShooting>().enabled = true;
-         Transform viewModelCamera = myPlayerGO.transform.Find("FirstPersonCharacter/ViewModelCamera");
-         viewModelCamera.gameObject.GetComponent<Camera>().enabled = true;
+    //     myPlayerGOcam.GetComponent<AudioListener>().enabled = true;
+    //     myPlayerGOcam.GetComponent<FlareLayer>().enabled = true;
+     //    myPlayerGO.GetComponent<PlayerMovement>().enabled = true;
+     //    myPlayerGO.GetComponent<PlayerShooting>().enabled = true;
+      //   Transform viewModelCamera = myPlayerGO.transform.Find("FirstPersonCharacter/ViewModelCamera");
+      //   viewModelCamera.gameObject.GetComponent<Camera>().enabled = true;
 
 
-         Transform playerModel = myPlayerGO.transform.Find("PlayerModel");
-         playerModel.gameObject.layer = 9;
-         Transform[] playerModelChildren = playerModel.GetComponentsInChildren<Transform>();
-         foreach (Transform child in playerModelChildren)
-         {
-             child.gameObject.layer = 9;
-         }
-         Transform viewModels = myPlayerGO.transform.Find("FirstPersonCharacter/ViewModels");
-         viewModels.gameObject.SetActive(true);
-         myPlayerGO.GetComponent<PhotonView>().RPC("SetTeamID", PhotonTargets.AllBuffered, teamID); */
+      //   Transform playerModel = myPlayerGO.transform.Find("PlayerModel");
+      //   playerModel.gameObject.layer = 9;
+      //   Transform[] playerModelChildren = playerModel.GetComponentsInChildren<Transform>();
+       //  foreach (Transform child in playerModelChildren)
+       //  {
+       //      child.gameObject.layer = 9;
+      //   }
+      //   Transform viewModels = myPlayerGO.transform.Find("FirstPersonCharacter/ViewModels");
+       //  viewModels.gameObject.SetActive(true);
+
 
     }
+
 
 }
