@@ -66,6 +66,8 @@
     <Compile Include="Assets\Menu Scripts\MasterMenu.cs" />
     <Compile Include="Assets\Menu Scripts\ServerBrowser.cs" />
     <Compile Include="Assets\Menu Scripts\ServerBrowserBack.cs" />
+    <Compile Include="Assets\Offline Scripts\CPMPlayer.cs" />
+    <Compile Include="Assets\Offline Scripts\TeamMember.cs" />
     <Compile Include="Assets\Online Scripts\NetworkCharacter.cs" />
     <Compile Include="Assets\Online Scripts\selfNetworkManager.cs" />
     <Compile Include="Assets\Online Scripts\SpawnPoint.cs" />

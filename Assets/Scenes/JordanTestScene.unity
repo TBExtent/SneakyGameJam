@@ -123,7 +123,6 @@ GameObject:
   - component: {fileID: 41145384}
   - component: {fileID: 41145383}
   - component: {fileID: 41145382}
-  - component: {fileID: 41145381}
   - component: {fileID: 41145380}
   m_Layer: 0
   m_Name: Spawn Point 1
@@ -144,18 +143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamID: 1
---- !u!65 &41145381
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 41145379}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &41145382
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -252,9 +239,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offlineMode: 0
-  strPlayerGameObject: basicNetworkCharacter
+  strPlayerGameObject: basicNetworkCharacter2
   playerRespawnTimer: 0
-  standbyCamera: {fileID: 0}
+  standbyCamera: {fileID: 517083300}
   DebugTeamID: 0
 --- !u!1 &151007434
 GameObject:
@@ -341,58 +328,90 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &265956199
+--- !u!1001 &320758815
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4219802142410678, guid: 8a6c1974b39b8d649968a975ab6b1e9f, type: 2}
+    - target: {fileID: 4814523393826482, guid: 1260e20c80d54864eb430b8b33adb834, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.23582
+      value: -6.98633
       objectReference: {fileID: 0}
-    - target: {fileID: 4219802142410678, guid: 8a6c1974b39b8d649968a975ab6b1e9f, type: 2}
+    - target: {fileID: 4814523393826482, guid: 1260e20c80d54864eb430b8b33adb834, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.0381148
+      value: 1.7981148
       objectReference: {fileID: 0}
-    - target: {fileID: 4219802142410678, guid: 8a6c1974b39b8d649968a975ab6b1e9f, type: 2}
+    - target: {fileID: 4814523393826482, guid: 1260e20c80d54864eb430b8b33adb834, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.2077229
+      value: 2.1945531
       objectReference: {fileID: 0}
-    - target: {fileID: 4219802142410678, guid: 8a6c1974b39b8d649968a975ab6b1e9f, type: 2}
+    - target: {fileID: 4814523393826482, guid: 1260e20c80d54864eb430b8b33adb834, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4219802142410678, guid: 8a6c1974b39b8d649968a975ab6b1e9f, type: 2}
+    - target: {fileID: 4814523393826482, guid: 1260e20c80d54864eb430b8b33adb834, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4219802142410678, guid: 8a6c1974b39b8d649968a975ab6b1e9f, type: 2}
+    - target: {fileID: 4814523393826482, guid: 1260e20c80d54864eb430b8b33adb834, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4219802142410678, guid: 8a6c1974b39b8d649968a975ab6b1e9f, type: 2}
+    - target: {fileID: 4814523393826482, guid: 1260e20c80d54864eb430b8b33adb834, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4219802142410678, guid: 8a6c1974b39b8d649968a975ab6b1e9f, type: 2}
+    - target: {fileID: 4814523393826482, guid: 1260e20c80d54864eb430b8b33adb834, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114390520374004634, guid: 8a6c1974b39b8d649968a975ab6b1e9f,
+    - target: {fileID: 1888377997430414, guid: 1260e20c80d54864eb430b8b33adb834, type: 2}
+      propertyPath: m_Name
+      value: basicNetworkCharacter2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114992406462389504, guid: 1260e20c80d54864eb430b8b33adb834,
         type: 2}
       propertyPath: viewIdField
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114390520374004634, guid: 8a6c1974b39b8d649968a975ab6b1e9f,
+    - target: {fileID: 114992406462389504, guid: 1260e20c80d54864eb430b8b33adb834,
         type: 2}
       propertyPath: instantiationId
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8a6c1974b39b8d649968a975ab6b1e9f, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: 1260e20c80d54864eb430b8b33adb834, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &320758816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1888377997430414, guid: 1260e20c80d54864eb430b8b33adb834,
+    type: 2}
+  m_PrefabInternal: {fileID: 320758815}
+--- !u!4 &320758817 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4814523393826482, guid: 1260e20c80d54864eb430b8b33adb834,
+    type: 2}
+  m_PrefabInternal: {fileID: 320758815}
+--- !u!114 &320758818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 320758816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0103dd974a0b7c94b903dc1d3d1ae5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  _teamID: 0
+  CharacterTextures:
+  - {fileID: 2800000, guid: db4b1de3894093748ba777a98ddacd8b, type: 3}
+  - {fileID: 2800000, guid: 1bdfbf15f6abec34e9bb38e2d81fcc84, type: 3}
+  TeamColourTransforms:
+  - {fileID: 320758817}
 --- !u!1 &441054419
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +422,6 @@ GameObject:
   - component: {fileID: 441054424}
   - component: {fileID: 441054423}
   - component: {fileID: 441054422}
-  - component: {fileID: 441054421}
   - component: {fileID: 441054420}
   m_Layer: 0
   m_Name: Spawn Point 0
@@ -424,18 +442,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamID: 0
---- !u!65 &441054421
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 441054419}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &441054422
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -507,7 +513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &517083301
 AudioListener:
   m_ObjectHideFlags: 0
@@ -578,7 +584,6 @@ GameObject:
   - component: {fileID: 784714036}
   - component: {fileID: 784714035}
   - component: {fileID: 784714034}
-  - component: {fileID: 784714033}
   - component: {fileID: 784714032}
   m_Layer: 0
   m_Name: Spawn Point 2
@@ -599,18 +604,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamID: 2
---- !u!65 &784714033
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 784714031}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &784714034
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -676,7 +669,6 @@ GameObject:
   - component: {fileID: 1817008903}
   - component: {fileID: 1817008902}
   - component: {fileID: 1817008901}
-  - component: {fileID: 1817008900}
   - component: {fileID: 1817008899}
   m_Layer: 0
   m_Name: Spawn Point 3
@@ -697,18 +689,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamID: 3
---- !u!65 &1817008900
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1817008898}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1817008901
 MeshRenderer:
   m_ObjectHideFlags: 0
