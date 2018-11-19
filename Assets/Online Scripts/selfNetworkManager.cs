@@ -206,7 +206,7 @@ public class selfNetworkManager : MonoBehaviour {
         myPlayerGOviewmodelCam.GetComponent<Camera>().enabled = true;
         myPlayerGOcam.GetComponent<AudioListener>().enabled = true;
         myPlayerGOcam.GetComponent<FlareLayer>().enabled = true;
-        myPlayerGO.GetComponent<CPMPlayer>().enabled = true;
+        myPlayerGO.GetComponent<PlayerControls>().enabled = true;
         myPlayerGO.GetComponent<PlayerShootingRaycast>().enabled = true;
 
         myPlayerGO.GetComponent<PhotonView>().RPC("SetTeamID", PhotonTargets.AllBuffered, teamID);
