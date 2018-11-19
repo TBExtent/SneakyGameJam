@@ -6,7 +6,7 @@ public class PlayerControls : MonoBehaviour {
 
 	Rigidbody rigidBody;
 	Transform cameraTransform;
-	ParticleSystem particleSystem;
+	//ParticleSystem particleSystem;
 	ParticleSystem.EmissionModule emission;
 	
 	public float speed = 6f;
@@ -22,9 +22,11 @@ public class PlayerControls : MonoBehaviour {
 		rigidBody = GetComponent<Rigidbody>();
 		//transform = GetComponent<Transform>();
 		cameraTransform = transform.GetChild(0).GetComponent<Transform>();
-		particleSystem = GetComponent<ParticleSystem>();
-		emission = particleSystem.emission;
-		emission.enabled = true;
+		//particleSystem = GetComponent<ParticleSystem>();
+		//emission = particleSystem.emission;
+		//emission.enabled = true;
+
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 
 	// Update is called once per frame
@@ -38,6 +40,8 @@ public class PlayerControls : MonoBehaviour {
 
 		if (invertY) rotationY = cameraTransform.localEulerAngles.x - Input.GetAxis("Mouse Y") * sensitivity;
 		else rotationY = cameraTransform.localEulerAngles.x + Input.GetAxis("Mouse Y") * sensitivity;
+		if (rotationY > 90 && rotationY < 180) rotationY = 90;
+		else if (rotationY < 270 && rotationY >= 180) rotationY = 270;
 
 		transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, rotationX, transform.localEulerAngles.z);
 		cameraTransform.localEulerAngles = new Vector3(rotationY, cameraTransform.localEulerAngles.y, cameraTransform.localEulerAngles.z);
@@ -59,7 +63,7 @@ public class PlayerControls : MonoBehaviour {
 	}
 
 	void GunParticles () {
-		emission.SetBursts(new ParticleSystem.Burst[]{new ParticleSystem.Burst(0.2f, 20, 30, 1, 1)});
-		particleSystem.Play();
+		//emission.SetBursts(new ParticleSystem.Burst[]{new ParticleSystem.Burst(0.2f, 20, 30, 1, 1)});
+		//particleSystem.Play();
 	}
 }
