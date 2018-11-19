@@ -32,5 +32,7 @@ public class PlayerShootingRaycast : MonoBehaviour {
     void Fire()
     {
         //Firstly, we do our effects:
+        viewModel.GetComponent<Animation>().clip = shootClip;
+        viewModel.GetComponent<Animation>().Play();
     }
 }
