@@ -5,19 +5,16 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour {
 
 	Rigidbody rigidBody;
-	Transform transform;
 	Transform cameraTransform;
 	float speed = 5f;
 	float sensitivity = 5f;
-	float minimumY = -120f;
-	float maximumY = 0;
 	bool invertX = false;
 	bool invertY = true;
 
 	// Use this for initialization
 	void Start () {
 		rigidBody = GetComponent<Rigidbody>();
-		transform = GetComponent<Transform>();
+		//transform = GetComponent<Transform>();
 		cameraTransform = transform.GetChild(0).GetComponent<Transform>();
 	}
 	
@@ -32,7 +29,6 @@ public class PlayerControls : MonoBehaviour {
 
 		if (invertY) rotationY = cameraTransform.localEulerAngles.x - Input.GetAxis("Mouse Y") * sensitivity;
 		else rotationY = cameraTransform.localEulerAngles.x + Input.GetAxis("Mouse Y") * sensitivity;
-		//rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
 
 		transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, rotationX, transform.localEulerAngles.z);
 		cameraTransform.localEulerAngles = new Vector3(rotationY, cameraTransform.localEulerAngles.y, cameraTransform.localEulerAngles.z);
