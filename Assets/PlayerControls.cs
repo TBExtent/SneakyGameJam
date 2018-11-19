@@ -40,7 +40,10 @@ public class PlayerControls : MonoBehaviour {
 		Vector3 floorPosition = new Vector3(transform.position.x, transform.position.y - 0.9f, transform.position.z);
 		RaycastHit hit;
 		bool onGround = Physics.Raycast(floorPosition, Vector3.down, out hit, groundDist);
-		if (Input.GetKey(KeyCode.Space) && onGround && Mathf.Abs(rigidBody.velocity.y) < 5) {
+		if (onGround && hit.transform.gameObject.tag == "bouncePad") {
+			rigidBody.velocity = new Vector3(rigidBody.velocity.x, bounceHeight, rigidBody.velocity.z);
+		}
+		else if (Input.GetKey(KeyCode.Space) && onGround && Mathf.Abs(rigidBody.velocity.y) < 5) {
 			//Debug.Log("aaa");
 			rigidBody.velocity = new Vector3(rigidBody.velocity.x, jumpHeight, rigidBody.velocity.z);
 		}
