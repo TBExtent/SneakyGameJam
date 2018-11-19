@@ -7,7 +7,7 @@ public class PlayerControls : MonoBehaviour {
 	Rigidbody rigidBody;
 	Transform cameraTransform;
 	
-	float speed = 5f;
+	float speed = 6f;
 	float sensitivity = 5f;
 	float jumpHeight = 7f;
 	float bounceHeight = 20f;
