@@ -46,4 +46,7 @@ MonoBehaviour:
   - DisplayFragText
   - instantiateRagdoll
   - TakeDamage
+  - fireTracer
+  - drawBeamServer
+  - RicochetEffect
   DisableAutoOpenWizard: 1
