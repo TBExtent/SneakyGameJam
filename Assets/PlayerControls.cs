@@ -9,7 +9,8 @@ public class PlayerControls : MonoBehaviour {
 	
 	float speed = 5f;
 	float sensitivity = 5f;
-	float jumpHeight = 10f;
+	float jumpHeight = 7f;
+	float bounceHeight = 20f;
 	float groundDist = 0.5f;
 	bool invertX = false;
 	bool invertY = true;
