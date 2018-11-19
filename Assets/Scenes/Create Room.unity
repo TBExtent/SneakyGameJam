@@ -1280,6 +1280,22 @@ Prefab:
       propertyPath: m_Text
       value: Selected Map
       objectReference: {fileID: 0}
+    - target: {fileID: 114513022647559116, guid: befe6fadfcba0194597e3674a7b93c3f,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8a57471bcb8b840b0a7e3958fcaa2dbb,
+        type: 3}
+    - target: {fileID: 114286047905491566, guid: befe6fadfcba0194597e3674a7b93c3f,
+        type: 2}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114513022647559116, guid: befe6fadfcba0194597e3674a7b93c3f,
+        type: 2}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: befe6fadfcba0194597e3674a7b93c3f, type: 2}
   m_IsPrefabAsset: 0
