@@ -8,7 +8,7 @@ public class NetworkCharacter : Photon.MonoBehaviour {
    public  Quaternion realRotation = Quaternion.identity;
 
     bool gotFirstUpdate = false;
-
+    public Animator anim;
     public float RealAimAngle = 0f;
     // Use this for initialization
 
@@ -65,7 +65,7 @@ public class NetworkCharacter : Photon.MonoBehaviour {
           //  anim.SetBool("Fire", (bool)stream.ReceiveNext());
             //anim.SetBool("Firing", (bool)stream.ReceiveNext());
             RealAimAngle = (float)stream.ReceiveNext();
-
+            anim.SetFloat("AimAngle", RealAimAngle);
 
             if (gotFirstUpdate == false)
             {

@@ -6,6 +6,7 @@ public class AimAngleScript : MonoBehaviour {
 
 	public float AimAngle = 0;
 	public GameObject PlayerCamera;
+	public Animator anim;
 	// Use this for initialization
 	void Start () {
 
@@ -28,6 +29,6 @@ public class AimAngleScript : MonoBehaviour {
 				//lookingUp
 				AimAngle = 360 - PlayerCamera.transform.rotation.eulerAngles.x +5;
 		}
-	//	anim.SetFloat("AimAngle", aimAngle);
+		anim.SetFloat("AimAngle", AimAngle);
 }
 }
