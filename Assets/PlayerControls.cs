@@ -6,6 +6,8 @@ public class PlayerControls : MonoBehaviour {
 
 	Rigidbody rigidBody;
 	Transform cameraTransform;
+	ParticleSystem particleSystem;
+	ParticleSystem.EmissionModule emission;
 	
 	public float speed = 6f;
 	public float sensitivity = 5f;
@@ -20,6 +22,9 @@ public class PlayerControls : MonoBehaviour {
 		rigidBody = GetComponent<Rigidbody>();
 		//transform = GetComponent<Transform>();
 		cameraTransform = transform.GetChild(0).GetComponent<Transform>();
+		particleSystem = GetComponent<ParticleSystem>();
+		emission = particleSystem.emission;
+		emission.enabled = true;
 	}
 
 	// Update is called once per frame
@@ -49,5 +54,12 @@ public class PlayerControls : MonoBehaviour {
 		else if (Input.GetKey(KeyCode.Space) && onGround && Mathf.Abs(rigidBody.velocity.y) < 5) {
 			rigidBody.velocity = new Vector3(rigidBody.velocity.x, jumpHeight, rigidBody.velocity.z);
 		}
+
+		if (Input.GetKey(KeyCode.Mouse0)) GunParticles();
+	}
+
+	void GunParticles () {
+		emission.SetBursts(new ParticleSystem.Burst[]{new ParticleSystem.Burst(0.2f, 20, 30, 1, 1)});
+		particleSystem.Play();
 	}
 }
