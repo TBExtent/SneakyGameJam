@@ -31,8 +31,10 @@ public class PlayerShootingRaycast : MonoBehaviour {
 
     void Fire()
     {
-        //Firstly, we do our effects:
+        //Firstly, we do our raycast to determine the hitPoint of our weapon
+        //Now we do our effects:
         viewModel.GetComponent<Animation>().clip = shootClip;
         viewModel.GetComponent<Animation>().Play();
+
     }
 }
