@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 136440967986523544}
   - component: {fileID: 54851362701186762}
   - component: {fileID: 114903511188460278}
+  - component: {fileID: 114008074871004924}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -167,7 +168,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -179,6 +180,26 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1050878140285248}
   m_Enabled: 1
+--- !u!114 &114008074871004924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1679130613172312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a46177ae0bb2a14db8ff7556f17e424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localBarrel: {fileID: 0}
+  Barrel: {fileID: 0}
+  fireRate: 0.5
+  shootClip: {fileID: 0}
+  viewModel: {fileID: 0}
+  beamPrefab: {fileID: 0}
+  muzzleFlash: {fileID: 0}
+  ricochet: {fileID: 0}
+  playerView: {fileID: 0}
 --- !u!114 &114903511188460278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -190,6 +211,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 929fce59cfb3e4ca795e8af4d9b4f54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 6
+  sensitivity: 5
+  jumpHeight: 7
+  bounceHeight: 20
+  invertX: 0
+  invertY: 1
 --- !u!136 &136440967986523544
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -198,7 +225,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1679130613172312}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1

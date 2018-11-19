@@ -133,16 +133,16 @@ public class selfNetworkManager : MonoBehaviour {
                     SpawnMyPlayer(2);
                 }
 
-                if (GUILayout.Button("Yellow"))
-                {
-                    teamIDSaved = 3;
-                    SpawnMyPlayer(3);
-                }
+              //  if (GUILayout.Button("Yellow"))
+              //  {
+              //      teamIDSaved = 3;
+              //      SpawnMyPlayer(3);
+              //  }
 
 
                 if (GUILayout.Button("Auto Assign"))
                 {
-                    teamIDSaved = Random.Range(1, 4);
+                    teamIDSaved = Random.Range(1, 3);
                     SpawnMyPlayer(teamIDSaved);
                 }
                 GUILayout.FlexibleSpace();
@@ -200,10 +200,14 @@ public class selfNetworkManager : MonoBehaviour {
         GameObject myPlayerGO = PhotonNetwork.Instantiate(strPlayerGameObject, mySpawnPoint.transform.position, mySpawnPoint.transform.rotation, 0);
         // After we have instantiated our character on the network, we should enable all the scripts that we will use to control it:
         GameObject myPlayerGOcam = myPlayerGO.transform.Find("FirstPersonCharacter").gameObject;
+        GameObject myPlayerGOviewmodelCam = myPlayerGO.transform.Find("FirstPersonCharacter/ViewmodelCamera").gameObject;
         myPlayerGOcam.GetComponent<Camera>().enabled = true;
+        myPlayerGOviewmodelCam.SetActive(true);
+        myPlayerGOviewmodelCam.GetComponent<Camera>().enabled = true;
         myPlayerGOcam.GetComponent<AudioListener>().enabled = true;
         myPlayerGOcam.GetComponent<FlareLayer>().enabled = true;
         myPlayerGO.GetComponent<CPMPlayer>().enabled = true;
+        myPlayerGO.GetComponent<PlayerShootingRaycast>().enabled = true;
 
         myPlayerGO.GetComponent<PhotonView>().RPC("SetTeamID", PhotonTargets.AllBuffered, teamID);
         // myPlayerGO.GetComponentInChildren<EnhancedMouseLook>().enabled = true;

@@ -4,11 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - music
+=======
+  - bouncePad
+>>>>>>> master
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
+<<<<<<< HEAD
   - 
   - Water
   - UI
@@ -38,6 +43,37 @@ TagManager:
   - 
   - 
   - 
+=======
+  -
+  - Water
+  - UI
+  -
+  -
+  - PostProcessing
+  - Viewmodel
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  - 
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+>>>>>>> master
   m_SortingLayers:
   - name: Default
     uniqueID: 0
