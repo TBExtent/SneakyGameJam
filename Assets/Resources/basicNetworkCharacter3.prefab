@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 114493223196557280}
   - component: {fileID: 114710570965883264}
   - component: {fileID: 114292198157950106}
+  - component: {fileID: 114169819042063218}
   m_Layer: 0
   m_Name: basicNetworkCharacter3
   m_TagString: Player
@@ -2101,7 +2102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1112509742187130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 393.4712, y: 294.8323, z: -884.78284}
+  m_LocalPosition: {x: 100.80399, y: 233.26373, z: -1043.9624}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4701328968748486}
@@ -8109,6 +8110,17 @@ MonoBehaviour:
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
+--- !u!114 &114169819042063218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1112509742187130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d1bd4809e5c6041b5303c5ef972a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114292198157950106
 MonoBehaviour:
   m_ObjectHideFlags: 1
