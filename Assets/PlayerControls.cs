@@ -8,7 +8,7 @@ public class PlayerControls : MonoBehaviour {
 	Transform cameraTransform;
 	//ParticleSystem particleSystem;
 	ParticleSystem.EmissionModule emission;
-	
+
 	public float speed = 6f;
 	public float sensitivity = 5f;
 	public float jumpHeight = 7f;
@@ -25,7 +25,7 @@ public class PlayerControls : MonoBehaviour {
 		//particleSystem = GetComponent<ParticleSystem>();
 		//emission = particleSystem.emission;
 		//emission.enabled = true;
-
+		Cursor.visible = false;
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 

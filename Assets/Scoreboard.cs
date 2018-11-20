@@ -73,6 +73,7 @@ void engageReload(){
 [PunRPC]
 void reload(){
 			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
  	SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 }
 	// Update is called once per frame
