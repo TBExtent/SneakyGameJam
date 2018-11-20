@@ -74,8 +74,9 @@ public class Health : MonoBehaviour
     public void AddHealth(float amount)
     {
         if(GetComponent<PhotonView>().isMine == true){
-          GameObject.FindWithTag("HUD").transform.Find("HealthText").GetComponent<Text>();
+
           currentHitPoints += amount;
+            GameObject.FindWithTag("HUD").transform.Find("HealthText").GetComponent<Text>().text = "Health: " + currentHitPoints.ToString();
           if (currentHitPoints > hitPoints)
           {
               currentHitPoints = hitPoints;

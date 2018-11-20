@@ -45,7 +45,7 @@ public class PickupItem : Photon.MonoBehaviour, IPunObservable
 
     /// <summary>If this client sent a pickup. To avoid sending multiple pickup requests before reply is there.</summary>
     public bool SentPickup;
-
+    public float healthAmount;
     /// <summary>Timestamp when to respawn the item (compared to PhotonNetwork.time). </summary>
     public double TimeOfRespawn;    // needed when we want to update new players when a PickupItem respawns
 
@@ -61,10 +61,13 @@ public class PickupItem : Photon.MonoBehaviour, IPunObservable
         // note: if you "position" remote characters by setting their translation, triggers won't be hit.
 
         PhotonView otherpv = other.GetComponent<PhotonView>();
-        if (this.PickupOnTrigger && otherpv != null && otherpv.isMine)
+        if (this.PickupOnTrigger && otherpv != null && otherpv.isMine && other.gameObject.GetComponent<Health>().currentHitPoints < 100)
         {
             //Debug.Log("OnTriggerEnter() calls Pickup().");
             this.Pickup();
+            if(other.gameObject.GetComponent<Health>() != null){
+              other.gameObject.GetComponent<Health>().AddHealth(healthAmount);
+            }
         }
     }
 
