@@ -15,12 +15,15 @@ public class Health : MonoBehaviour
     public GameObject killedText;
     public GameObject fragText;
     public GameObject ragdollNormal;
+
+    public Text HealthText;
   //  public GameObject ragdollVaporise;
     // Use this for initialization
     void Start()
     {
         if (GetComponent<PhotonView>().isMine)
         {
+            HealthText = GameObject.FindWithTag("HUD").transform.Find("HealthText").GetComponent<Text>();
             currentHitPoints = hitPoints;
             snm = GameObject.FindObjectOfType<selfNetworkManager>();
            // snm.UIHealth.text = currentHitPoints.ToString();
@@ -37,11 +40,12 @@ public class Health : MonoBehaviour
     [PunRPC]
     public void TakeDamage(float amt, string LHP, int killerTeamID)
     {
-        GameObject.FindWithTag("HUD").transform.Find("HealthText").GetComponent<Text>();
+
+
         lastHitPlayer = LHP;
         amt = Mathf.Round(amt);
         currentHitPoints -= amt;
-
+        HealthText.text = "Health: " + currentHitPoints.ToString();
         if (GetComponent<PhotonView>().isMine)
         {
           //  snm.UIHealth.text = currentHitPoints.ToString();
@@ -98,7 +102,8 @@ public class Health : MonoBehaviour
                     if (GetComponent<PhotonView>().isMine)
                     {
                         GetComponent<PhotonView>().RPC("DisplayFragText", PhotonTargets.All, LHP, PhotonNetwork.player.NickName, killerTeamID, GetComponent<TeamMember>().teamID);
-                        snm.playerRespawnTimer = 1f;
+                        GetComponent<PhotonView>().RPC("UpdateScores", PhotonTargets.AllBuffered, killerTeamID, GetComponent<TeamMember>().teamID);
+                        snm.playerRespawnTimer = 5f;
                         snm.standbyCamera.SetActive(true);
                         PhotonNetwork.Destroy(gameObject);
                         //  Invoke("AddDeath", 0.05f);
@@ -121,6 +126,27 @@ public class Health : MonoBehaviour
             }
             GameObject killTextInstance = Instantiate(fragText);
             killTextInstance.GetComponentInChildren<Text>().text = (fraggerName + " just fragged " + fraggedName + correctly);
+    }
+
+    [PunRPC]
+    void UpdateScores(int killerTeamID, int myTeamID){
+      GameObject scoreboard = GameObject.FindWithTag("Scoreboard");
+      if(killerTeamID == 2 && myTeamID == 2){
+        //Take points from blue
+        scoreboard.GetComponent<Scoreboard>().addIncorrectKill(2);
+      }
+      if(killerTeamID == 1 && myTeamID == 1){
+        //Take points from red
+        scoreboard.GetComponent<Scoreboard>().addIncorrectKill(1);
+      }
+      if(killerTeamID == 1 && myTeamID == 2){
+        //Give to red
+        scoreboard.GetComponent<Scoreboard>().addCorrectKill(1);
+      }
+      if(killerTeamID == 2 && myTeamID == 1){
+        //Give to blue
+        scoreboard.GetComponent<Scoreboard>().addCorrectKill(2);
+      }
     }
 
     public void updateHUD()

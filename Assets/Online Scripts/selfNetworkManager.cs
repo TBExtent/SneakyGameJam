@@ -7,6 +7,7 @@ public class selfNetworkManager : MonoBehaviour {
 
     public bool offlineMode = false;
     public string strPlayerGameObject = "basicNetworkCharacter3";
+    public string strScoreBoardGameObject = "ScoreboardCanvas";
     bool connecting = false;
     public Transform playerModel;
     List<string> chatMessages;
@@ -21,6 +22,9 @@ public class selfNetworkManager : MonoBehaviour {
         spawnPoints = GameObject.FindObjectsOfType<SpawnPoint>();
         PhotonNetwork.player.name = PlayerPrefs.GetString("Username", "Player");
         chatMessages = new List<string>();
+        if(PhotonNetwork.isMasterClient == true){
+            PhotonNetwork.Instantiate(strScoreBoardGameObject, transform.position, transform.rotation, 0);
+        }
         if(standbyCamera == null)
         {
             standbyCamera = GameObject.Find("StandbyCamera");
@@ -114,11 +118,11 @@ public class selfNetworkManager : MonoBehaviour {
                 GUILayout.EndHorizontal();
 
 
-                if (GUILayout.Button("Renegade"))
-                {
-                    teamIDSaved = 0;
-                    SpawnMyPlayer(0);
-                }
+          //      if (GUILayout.Button("Renegade"))
+          //      {
+          //          teamIDSaved = 0;
+          //          SpawnMyPlayer(0);
+            //    }
 
                 if (GUILayout.Button("Red"))
                 {
