@@ -10,21 +10,20 @@ public class DOORScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
 		closedPos = transform.position;
-		openPos = closedPos + transform.up * 5;
+		openPos = closedPos + transform.up * 10;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		players = GameObject.FindGameObjectsWithTag("Player");
 		for (int i = 0; i < players.Length; i++) {
 			if ((players[i].transform.position - closedPos).sqrMagnitude <= activateDist) {
 				transform.position = Vector3.Lerp(transform.position, openPos, 0.2f);
-				Debug.Log("aaa");
 			}
 			else {
-				transform.position = Vector3.Lerp(transform.position, closedPos, 0.5f);
+				transform.position = Vector3.Lerp(transform.position, closedPos, 0.2f);
 			}
 		}
 	}

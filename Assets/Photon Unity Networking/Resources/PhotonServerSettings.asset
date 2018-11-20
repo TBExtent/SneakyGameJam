@@ -49,4 +49,8 @@ MonoBehaviour:
   - fireTracer
   - drawBeamServer
   - RicochetEffect
+  - SetTeamColourTurncoat
+  - addCorrectKill
+  - addIncorrectKill
+  - UpdateScores
   DisableAutoOpenWizard: 1

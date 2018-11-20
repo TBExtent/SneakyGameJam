@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 136781468760326682}
   - component: {fileID: 114493223196557280}
   - component: {fileID: 114710570965883264}
+  - component: {fileID: 114292198157950106}
   m_Layer: 0
   m_Name: basicNetworkCharacter3
   m_TagString: Player
@@ -836,7 +837,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1112509742187130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 295.62747, y: 333.461, z: -473.96536}
+  m_LocalPosition: {x: 185.16008, y: 398.9351, z: -996.3943}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4701328968748486}
@@ -3196,6 +3197,28 @@ MonoBehaviour:
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
+--- !u!114 &114292198157950106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1112509742187130}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f6138679faefd479bf739c6641b23a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  teamID: 0
+  otherTeamID: 0
+  cooldown: 15
+  duration: 5
+  cooldownRemaining: 0
+  CharacterTextures:
+  - {fileID: 2800000, guid: 72708a25103c3fe4f9074f7296e86b7a, type: 3}
+  - {fileID: 2800000, guid: 11fbb6bb403e9e84aac8883a35555355, type: 3}
+  TeamColourTransforms:
+  - {fileID: 4807125064923748}
 --- !u!114 &114316948215717520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3263,7 +3286,7 @@ MonoBehaviour:
   lastHitPlayer: 
   lastHitType: 
   killedText: {fileID: 0}
-  fragText: {fileID: 0}
+  fragText: {fileID: 1304868449841370, guid: c926d30fe7f7aec42bbc66b175e276ec, type: 2}
   ragdollNormal: {fileID: 1432516392330894, guid: 9f3270aca122fe34f88ebfea3458dc25,
     type: 2}
 --- !u!114 &114710570965883264
