@@ -65,7 +65,7 @@ public class NetworkCharacter : Photon.MonoBehaviour {
           //  anim.SetBool("Fire", (bool)stream.ReceiveNext());
             //anim.SetBool("Firing", (bool)stream.ReceiveNext());
             RealAimAngle = (float)stream.ReceiveNext();
-            anim.SetFloat("AimAngle", RealAimAngle);
+        //    anim.SetFloat("AimAngle", RealAimAngle);
 
             if (gotFirstUpdate == false)
             {

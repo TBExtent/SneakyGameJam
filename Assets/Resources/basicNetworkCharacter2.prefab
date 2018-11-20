@@ -86,6 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4051133211555594}
   - component: {fileID: 33956025840368782}
+  - component: {fileID: 95509297515348506}
   m_Layer: 0
   m_Name: RightLegJoint
   m_TagString: Untagged
@@ -136,7 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4860886026133176}
   m_Layer: 0
-  m_Name: TurncoatMan2
+  m_Name: TurncoatMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +153,7 @@ GameObject:
   - component: {fileID: 4440103826402176}
   - component: {fileID: 33221739677937000}
   - component: {fileID: 23264132918022294}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +170,7 @@ GameObject:
   - component: {fileID: 4783217490033168}
   - component: {fileID: 33077833992343294}
   - component: {fileID: 23072815980960132}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +203,7 @@ GameObject:
   - component: {fileID: 4359022061867442}
   - component: {fileID: 33979535979628724}
   - component: {fileID: 23885510687427076}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: FirePoint_Local
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,6 +236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4040236224196452}
   - component: {fileID: 33042623159996906}
+  - component: {fileID: 95798789301718074}
   m_Layer: 0
   m_Name: LeftLegJoint
   m_TagString: Untagged
@@ -286,7 +288,7 @@ GameObject:
   - component: {fileID: 4047478261719174}
   - component: {fileID: 33138040823468384}
   - component: {fileID: 23290982217083860}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +339,7 @@ GameObject:
   - component: {fileID: 4536989552366972}
   - component: {fileID: 33523339101123700}
   - component: {fileID: 23704872169903252}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: FirePoint_Local
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +408,7 @@ GameObject:
   - component: {fileID: 4814133399002514}
   - component: {fileID: 33032658236444756}
   - component: {fileID: 23902802249376036}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +458,7 @@ GameObject:
   - component: {fileID: 4777208270178636}
   - component: {fileID: 33163583033374732}
   - component: {fileID: 23800133696178354}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +492,7 @@ GameObject:
   - component: {fileID: 4320937861472242}
   - component: {fileID: 33512042058451510}
   - component: {fileID: 23283631701449020}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,7 +526,7 @@ GameObject:
   - component: {fileID: 4640302706249464}
   - component: {fileID: 33122538601214166}
   - component: {fileID: 23829519981237550}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,6 +552,7 @@ GameObject:
   - component: {fileID: 114324269818256298}
   - component: {fileID: 136285147022466688}
   - component: {fileID: 114719708893042120}
+  - component: {fileID: 114971833662689660}
   m_Layer: 0
   m_Name: basicNetworkCharacter2
   m_TagString: Untagged
@@ -566,7 +569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4482921562645828}
   - component: {fileID: 111721975434635302}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SimpleGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +654,7 @@ GameObject:
   - component: {fileID: 4823882542507030}
   - component: {fileID: 33261549692609850}
   - component: {fileID: 23654725419458386}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1097,7 +1100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1726224893862008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.302637, y: -22.784107, z: 4.757106}
+  m_LocalPosition: {x: 295.62747, y: 333.461, z: -473.96536}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4249988461073356}
@@ -1403,7 +1406,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 256
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2889,10 +2892,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!81 &81106410694696502
 AudioListener:
@@ -3098,6 +3101,42 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &95509297515348506
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1102770218994648}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 13ce15b0cdd288144a49c0f607f71b6f, type: 3}
+  m_Controller: {fileID: 9100000, guid: fae11c8db48c8a744b058a3e6c923f86, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95798789301718074
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1317079158696790}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 13ce15b0cdd288144a49c0f607f71b6f, type: 3}
+  m_Controller: {fileID: 9100000, guid: d0a7b09d9c1e5584a93a92eac6672e96, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95799206982588548
 Animator:
   serializedVersion: 3
@@ -3202,6 +3241,7 @@ MonoBehaviour:
   localBarrel: {fileID: 4536989552366972}
   Barrel: {fileID: 0}
   fireRate: 0.5
+  damage: 25
   shootClip: {fileID: 7400000, guid: 3e194b81ad397c446a7d0829fe334178, type: 2}
   viewModel: {fileID: 1751476706915620}
   beamPrefab: {fileID: 1921976082608188, guid: dc78a2ed60a188f4f930347606057938, type: 2}
@@ -3259,8 +3299,22 @@ MonoBehaviour:
   lastHitType: 
   killedText: {fileID: 0}
   fragText: {fileID: 0}
-  ragdollNormal: {fileID: 1033196493141370, guid: aae0a6f92ed28c8469883649ce90afbb,
+  ragdollNormal: {fileID: 1432516392330894, guid: 9f3270aca122fe34f88ebfea3458dc25,
     type: 2}
+--- !u!114 &114971833662689660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1726224893862008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f296480ca2ed06419637cc93ebdf52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0
+  leg1: {fileID: 95798789301718074}
+  leg2: {fileID: 95509297515348506}
 --- !u!124 &124267653914955090
 Behaviour:
   m_ObjectHideFlags: 1
