@@ -37,6 +37,7 @@ public class Health : MonoBehaviour
     [PunRPC]
     public void TakeDamage(float amt, string LHP, int killerTeamID)
     {
+        GameObject.FindWithTag("HUD").transform.Find("HealthText").GetComponent<Text>();
         lastHitPlayer = LHP;
         amt = Mathf.Round(amt);
         currentHitPoints -= amt;
@@ -70,6 +71,7 @@ public class Health : MonoBehaviour
 
     public void AddHealth(float amount)
     {
+              GameObject.FindWithTag("HUD").transform.Find("HealthText").GetComponent<Text>();
         currentHitPoints += amount;
         if (currentHitPoints > hitPoints)
         {
