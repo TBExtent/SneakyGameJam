@@ -71,7 +71,8 @@ public class Health : MonoBehaviour
     void instantiateRagdoll()
     {
         int teamID = GetComponent<TeamMember>().teamID;
-        Instantiate(ragdollNormal, transform.position, transform.rotation).GetComponent<InheritColour>().SetColour(teamID - 1);
+        GameObject ragdoll = Instantiate(ragdollNormal, transform.position, transform.rotation);
+        ragdoll.GetComponent<InheritColour>().SetColour(teamID - 1);
     }
 
     public void AddHealth(float amount)
