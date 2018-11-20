@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 114710570965883264}
   m_Layer: 0
   m_Name: basicNetworkCharacter3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3115,7 +3115,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -3133,7 +3133,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -3151,7 +3151,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -3179,8 +3179,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   ownerId: 0
   group: 0
   OwnerShipWasTransfered: 0
@@ -3205,8 +3205,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a46177ae0bb2a14db8ff7556f17e424, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   localBarrel: {fileID: 4363119676950804}
   Barrel: {fileID: 0}
   fireRate: 0.5
@@ -3227,8 +3227,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 722cc3e367a1d8040b17de388c479646, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   realRotation: {x: 0, y: 0, z: 0, w: 1}
   anim: {fileID: 95454946415618808}
   RealAimAngle: 0
@@ -3241,8 +3241,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0efa9e72e28c2b04ea72d9dc1808d1a4, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   AimAngle: 0
   PlayerCamera: {fileID: 1565853164041618}
   anim: {fileID: 95454946415618808}
@@ -3255,13 +3255,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8afd2e8d973d37f4bb5b498cd284b0a4, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   hitPoints: 100
   currentHitPoints: 100
   respawnTime: 5
-  lastHitPlayer:
-  lastHitType:
+  lastHitPlayer: 
+  lastHitType: 
   killedText: {fileID: 0}
   fragText: {fileID: 0}
   ragdollNormal: {fileID: 1432516392330894, guid: 9f3270aca122fe34f88ebfea3458dc25,
@@ -3275,8 +3275,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f296480ca2ed06419637cc93ebdf52d, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Speed: 0
   leg1: {fileID: 95805350979924416}
   leg2: {fileID: 95141687787170822}
@@ -3289,8 +3289,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0103dd974a0b7c94b903dc1d3d1ae5d3, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   isPlayer: 1
   _teamID: 0
   CharacterTextures:
@@ -3307,8 +3307,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 929fce59cfb3e4ca795e8af4d9b4f54d, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 6
   sensitivity: 5
   jumpHeight: 7
@@ -3335,7 +3335,7 @@ CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1112509742187130}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 114414e4324694563bb24e9c9e1e0477, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
