@@ -6,15 +6,14 @@ public class selfNetworkManager : MonoBehaviour {
     SpawnPoint[] spawnPoints;
 
     public bool offlineMode = false;
-    public string strPlayerGameObject = "basicNetworkCharacter";
+    public string strPlayerGameObject = "basicNetworkCharacter3";
     bool connecting = false;
-
+    public Transform playerModel;
     List<string> chatMessages;
     int maxChatMessages = 5;
     bool hasPickedTeam = false;
     int teamIDSaved = 0;
     public float playerRespawnTimer;
-
     public GameObject standbyCamera;
 
     public int DebugTeamID;
@@ -206,10 +205,19 @@ public class selfNetworkManager : MonoBehaviour {
         myPlayerGOviewmodelCam.GetComponent<Camera>().enabled = true;
         myPlayerGOcam.GetComponent<AudioListener>().enabled = true;
         myPlayerGOcam.GetComponent<FlareLayer>().enabled = true;
-        myPlayerGO.GetComponent<CPMPlayer>().enabled = true;
+        myPlayerGO.GetComponent<PlayerControls>().enabled = true;
         myPlayerGO.GetComponent<PlayerShootingRaycast>().enabled = true;
-
+        myPlayerGO.GetComponent<AimAngleScript>().enabled = true;
         myPlayerGO.GetComponent<PhotonView>().RPC("SetTeamID", PhotonTargets.AllBuffered, teamID);
+        playerModel = myPlayerGO.transform.Find("TurncoatMan");
+
+        //  foreach (Transform child in playerModel)
+        //  {
+        //      child.gameObject.SetActive(false);
+        //  }
+
+
+
         // myPlayerGO.GetComponentInChildren<EnhancedMouseLook>().enabled = true;
 
     //     myPlayerGOcam.GetComponent<AudioListener>().enabled = true;
