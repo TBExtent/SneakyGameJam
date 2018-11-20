@@ -13,6 +13,8 @@ public class TurnCoat : MonoBehaviour {
 	public float cooldown = 60f;
 	public float duration = 15f;
 	public float cooldownRemaining = 0f;
+	public AudioSource AuxAudio;
+	public AudioClip switchSound;
 	Text cooldownText;
 	[Header("Element 1 corresponds to RED, 2 to Blue")]
 	public Texture[] CharacterTextures;
@@ -50,6 +52,8 @@ public class TurnCoat : MonoBehaviour {
 	[PunRPC]
 	void SetTeamColourTurncoat(int ID)
 	{
+		AuxAudio.clip = switchSound;
+		AuxAudio.Play();
 			foreach(Transform t in TeamColourTransforms)
 			{
 					rend = t.GetComponent<Renderer>();
