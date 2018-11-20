@@ -7461,6 +7461,15 @@ Prefab:
       propertyPath: m_TagString
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 1605310601190784, guid: c4b6eaa0483795e47b962ed81e44c621, type: 2}
+      propertyPath: m_Name
+      value: DisguiseCooldown
+      objectReference: {fileID: 0}
+    - target: {fileID: 114374061683914724, guid: c4b6eaa0483795e47b962ed81e44c621,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Disguise:'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4b6eaa0483795e47b962ed81e44c621, type: 2}
   m_IsPrefabAsset: 0

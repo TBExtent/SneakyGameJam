@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TurnCoat : MonoBehaviour {
 
@@ -9,10 +10,10 @@ public class TurnCoat : MonoBehaviour {
 	public bool isPlayer = true;
 	public int teamID;
 	public int otherTeamID;
-	public float cooldown = 15f;
-	public float duration = 5f;
+	public float cooldown = 60f;
+	public float duration = 15f;
 	public float cooldownRemaining = 0f;
-
+	Text cooldownText;
 	[Header("Element 1 corresponds to RED, 2 to Blue")]
 	public Texture[] CharacterTextures;
 	public Transform[] TeamColourTransforms;
@@ -24,10 +25,12 @@ public class TurnCoat : MonoBehaviour {
 		else{
 			otherTeamID = 2;
 		}
+		 cooldownText = GameObject.FindWithTag("HUD").transform.Find("DisguiseCooldown").GetComponent<Text>();
 	}
 	void Update (){
-		if(cooldown >= 0){
+		if(cooldownRemaining >= 0){
 			cooldownRemaining -= Time.deltaTime;
+			cooldownText.text = "Disguise: " + (Mathf.Round(cooldownRemaining)).ToString();
 		}
 		if(Input.GetMouseButtonDown(1) && cooldownRemaining <= 0){
 
