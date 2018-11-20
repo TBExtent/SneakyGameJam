@@ -208,6 +208,7 @@ public class selfNetworkManager : MonoBehaviour {
         myPlayerGO.GetComponent<PlayerControls>().enabled = true;
         myPlayerGO.GetComponent<PlayerShootingRaycast>().enabled = true;
         myPlayerGO.GetComponent<AimAngleScript>().enabled = true;
+        myPlayerGO.GetComponent<TurnCoat>().enabled = true;
         myPlayerGO.GetComponent<PhotonView>().RPC("SetTeamID", PhotonTargets.AllBuffered, teamID);
         playerModel = myPlayerGO.transform.Find("TurncoatMan");
 

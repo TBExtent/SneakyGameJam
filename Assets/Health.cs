@@ -49,7 +49,7 @@ public class Health : MonoBehaviour
         {
 
 
-            Die(LHP);
+            Die(LHP, killerTeamID);
         }
     }
     //
@@ -78,7 +78,7 @@ public class Health : MonoBehaviour
     }
 
 
-    void Die(string LHP)
+    void Die(string LHP, int killerTeamID)
     {
 
         if (snm.offlineMode == false)
@@ -95,6 +95,7 @@ public class Health : MonoBehaviour
                 {
                     if (GetComponent<PhotonView>().isMine)
                     {
+                        GetComponent<PhotonView>().RPC("DisplayFragText", PhotonTargets.All, LHP, PhotonNetwork.player.NickName, killerTeamID, GetComponent<TeamMember>().teamID);
                         snm.playerRespawnTimer = 1f;
                         snm.standbyCamera.SetActive(true);
                         PhotonNetwork.Destroy(gameObject);
@@ -107,13 +108,17 @@ public class Health : MonoBehaviour
         }
     }
     [PunRPC]
-    void DisplayFragText(string fraggerName, string fraggedName)
+    void DisplayFragText(string fraggerName, string fraggedName, int killerTeamID, int myTeamID)
     {
-        if (fraggerName == PhotonNetwork.playerName.ToString())
-        {
+            string correctly = "";
+            if(killerTeamID == myTeamID){
+              correctly = " incorrectly!";
+            }
+            else{
+              correctly = " correctly!";
+            }
             GameObject killTextInstance = Instantiate(fragText);
-            killTextInstance.GetComponentInChildren<Text>().text = ("You just fragged " + fraggedName);
-        }
+            killTextInstance.GetComponentInChildren<Text>().text = (fraggerName + " just fragged " + fraggedName + correctly);
     }
 
     public void updateHUD()

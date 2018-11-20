@@ -49,4 +49,5 @@ MonoBehaviour:
   - fireTracer
   - drawBeamServer
   - RicochetEffect
+  - SetTeamColourTurncoat
   DisableAutoOpenWizard: 1
