@@ -7,7 +7,7 @@ public class PlayerShootingRaycast : MonoBehaviour {
     public Transform Barrel;
     public float fireRate = 0.5f;
     float cooldown;
-    float damage = 10f;
+    public float damage = 10f;
     public AnimationClip shootClip;
     public GameObject viewModel;
     public GameObject beamPrefab;
@@ -18,7 +18,7 @@ public class PlayerShootingRaycast : MonoBehaviour {
     void Start () {
         cooldown = fireRate;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
         if (cooldown > 0)
@@ -66,7 +66,7 @@ public class PlayerShootingRaycast : MonoBehaviour {
 
         Debug.Log("We have just shot the position" + hit.point);
 
-   
+
 
         // tempLocal is used to get the position vector of our barrel in the game world to send to other players.
 

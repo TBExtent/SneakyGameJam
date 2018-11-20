@@ -19,7 +19,7 @@ public class TeamMember : MonoBehaviour {
         foreach(Transform t in TeamColourTransforms)
         {
             rend = t.GetComponent<Renderer>();
-            rend.material.mainTexture = CharacterTextures[id];
+            rend.material.mainTexture = CharacterTextures[id -1];
         }
 
     }
