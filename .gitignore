@@ -34,6 +34,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-Assembly-CSharp-firstpass.csproj~NetworkBranch
-Assembly-CSharp.csproj~NetworkBranch
-Assembly-CSharp-Editor.csproj~NetworkBranch
+*.csproj~NetworkBranch
