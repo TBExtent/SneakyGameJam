@@ -32,7 +32,13 @@ public class TurnCoat : MonoBehaviour {
 	void Update (){
 		if(cooldownRemaining >= 0){
 			cooldownRemaining -= Time.deltaTime;
-			cooldownText.text = "Disguise: " + (Mathf.Round(cooldownRemaining)).ToString();
+			if(Mathf.Round(cooldownRemaining) == 0){
+				cooldownText.text = "Disguise Ready";
+			}
+			else{
+				cooldownText.text = "Disguise: " + (Mathf.Round(cooldownRemaining)).ToString();
+			}
+
 		}
 		if(Input.GetMouseButtonDown(1) && cooldownRemaining <= 0){
 

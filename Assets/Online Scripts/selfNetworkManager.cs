@@ -113,8 +113,8 @@ public class selfNetworkManager : MonoBehaviour {
                 GUILayout.FlexibleSpace();
 
                 GUILayout.BeginHorizontal();
-                GUILayout.Label("Username: ");
-                PhotonNetwork.player.name = GUILayout.TextField(PhotonNetwork.player.name);
+              //  GUILayout.Label("Username: ");
+              //  PhotonNetwork.player.name = GUILayout.TextField(PhotonNetwork.player.name);
                 GUILayout.EndHorizontal();
 
 

@@ -560,6 +560,17 @@ Prefab:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 1754897766236446, guid: befe6fadfcba0194597e3674a7b93c3f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975330373449664, guid: befe6fadfcba0194597e3674a7b93c3f,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Game Settings
+
+'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: befe6fadfcba0194597e3674a7b93c3f, type: 2}
   m_IsPrefabAsset: 0
