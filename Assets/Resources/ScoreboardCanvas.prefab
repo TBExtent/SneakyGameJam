@@ -307,7 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RedScore: 0
   BlueScore: 0
-  pointsToWin: 4
+  pointsToWin: 15
   pointsPerCorrectKill: 1
   pointsPerIncorrectKill: -2
   VictoryCanvasRed: {fileID: 1662088366690442, guid: 44fe8f885b33073409638f939bce1625,

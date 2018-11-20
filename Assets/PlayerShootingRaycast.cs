@@ -76,7 +76,7 @@ public class PlayerShootingRaycast : MonoBehaviour {
          viewModel.GetComponent<Animation>().Play();
          MuzzleFlashEffect(localBarrel.transform.position, hit.point);
         drawBeam(localBarrel.position, hit.point);
-        GetComponent<PhotonView>().RPC("drawBeamServer", PhotonTargets.Others, localBarrel.position, hit.point);
+        GetComponent<PhotonView>().RPC("drawBeamServer", PhotonTargets.Others, Barrel.position, hit.point);
         GetComponent<PhotonView>().RPC("RicochetEffect", PhotonTargets.All, hit.point);
         //Now we deal damage to the enemy player
         if (hitTransform != null)

@@ -41,15 +41,12 @@ public class Health : MonoBehaviour
     public void TakeDamage(float amt, string LHP, int killerTeamID)
     {
 
-
+      if(GetComponent<PhotonView>().isMine == true){
         lastHitPlayer = LHP;
         amt = Mathf.Round(amt);
         currentHitPoints -= amt;
         HealthText.text = "Health: " + currentHitPoints.ToString();
-        if (GetComponent<PhotonView>().isMine)
-        {
-          //  snm.UIHealth.text = currentHitPoints.ToString();
-        }
+
         if (currentHitPoints <= 0)
         {
 
@@ -57,6 +54,7 @@ public class Health : MonoBehaviour
             Die(LHP, killerTeamID);
         }
     }
+  }
     //
    /* [PunRPC]
     void findKillerPlayer(string playerNickname, string LHT) //Finds the appropriate quote to shout
@@ -75,13 +73,15 @@ public class Health : MonoBehaviour
 
     public void AddHealth(float amount)
     {
-              GameObject.FindWithTag("HUD").transform.Find("HealthText").GetComponent<Text>();
-        currentHitPoints += amount;
-        if (currentHitPoints > hitPoints)
-        {
-            currentHitPoints = hitPoints;
-        }
+        if(GetComponent<PhotonView>().isMine == true){
+          GameObject.FindWithTag("HUD").transform.Find("HealthText").GetComponent<Text>();
+          currentHitPoints += amount;
+          if (currentHitPoints > hitPoints)
+          {
+              currentHitPoints = hitPoints;
+          }
     }
+  }
 
 
     void Die(string LHP, int killerTeamID)
