@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BasicScene.unity
     guid: 1faf853ad1518e4459af730b4608722f
+  - enabled: 1
+    path: Assets/Scenes/2fort.unity
+    guid: c042209d98f8cf949adb4986cd7d899c
   m_configObjects: {}
