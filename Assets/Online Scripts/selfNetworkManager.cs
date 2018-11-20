@@ -6,7 +6,7 @@ public class selfNetworkManager : MonoBehaviour {
     SpawnPoint[] spawnPoints;
 
     public bool offlineMode = false;
-    public string strPlayerGameObject = "basicNetworkCharacter";
+    public string strPlayerGameObject = "basicNetworkCharacter3";
     bool connecting = false;
     public Transform playerModel;
     List<string> chatMessages;

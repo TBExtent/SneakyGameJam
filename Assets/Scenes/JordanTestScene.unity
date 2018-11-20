@@ -157,6 +157,11 @@ Prefab:
       propertyPath: standbyCamera
       value: 
       objectReference: {fileID: 517083300}
+    - target: {fileID: 114283665191534918, guid: 89e30c49a86a52349bba15150739ba67,
+        type: 2}
+      propertyPath: strPlayerGameObject
+      value: basicNetworkCharacter3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89e30c49a86a52349bba15150739ba67, type: 2}
   m_IsPrefabAsset: 0
