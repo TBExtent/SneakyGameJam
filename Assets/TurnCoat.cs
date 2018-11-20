@@ -28,7 +28,7 @@ public class TurnCoat : MonoBehaviour {
 	void Update (){
 		if(cooldown >= 0){
 			cooldownRemaining -= Time.deltaTime;
-		}
+		} 
 		if(Input.GetMouseButtonDown(1) && cooldownRemaining <= 0){
 
 			Debug.Log("Turning Coat");

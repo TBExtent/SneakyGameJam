@@ -70,7 +70,8 @@ public class Health : MonoBehaviour
     [PunRPC]
     void instantiateRagdoll()
     {
-            Instantiate(ragdollNormal, transform.position, transform.rotation);
+        int teamID = GetComponent<TeamMember>().teamID;
+        Instantiate(ragdollNormal, transform.position, transform.rotation).GetComponent<InheritColour>().SetColour(teamID - 1);
     }
 
     public void AddHealth(float amount)
