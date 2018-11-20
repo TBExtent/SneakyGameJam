@@ -48,20 +48,31 @@ void UpdateScoreboard(){
 void checkVictory(){
 	if(RedScore >= pointsToWin){
 		Debug.Log("Red Won");
-		Instantiate(VictoryCanvasRed, transform.position, transform.rotation);
+	  GetComponent<PhotonView>().RPC("RedVictory", PhotonTargets.All);
 		Invoke("engageReload", 5f);
 	}
 	else if(BlueScore >= pointsToWin){
 		Debug.Log("Blue Won");
-		Instantiate(VictoryCanvasBlue, transform.position, transform.rotation);
+	  GetComponent<PhotonView>().RPC("BlueVictory", PhotonTargets.All);
 		Invoke("engageReload", 5f);
 	}
+}
+
+[PunRPC]
+void BlueVictory(){
+		Instantiate(VictoryCanvasBlue, transform.position, transform.rotation);
+}
+
+[PunRPC]
+void RedVictory(){
+			Instantiate(VictoryCanvasRed, transform.position, transform.rotation);
 }
 void engageReload(){
      GetComponent<PhotonView>().RPC("reload", PhotonTargets.AllBuffered);
 }
 [PunRPC]
 void reload(){
+			Cursor.lockState = CursorLockMode.None;
  	SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 }
 	// Update is called once per frame

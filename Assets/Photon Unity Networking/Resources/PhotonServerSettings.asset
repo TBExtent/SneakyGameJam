@@ -54,4 +54,6 @@ MonoBehaviour:
   - addIncorrectKill
   - UpdateScores
   - reload
+  - BlueVictory
+  - RedVictory
   DisableAutoOpenWizard: 1
